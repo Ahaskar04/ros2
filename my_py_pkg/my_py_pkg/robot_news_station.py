@@ -15,7 +15,6 @@ class RobotNewsStationNode(Node):
         msg.data = "Hello"
         self.publisher_.publish(msg)
  
- 
 def main(args=None):
     rclpy.init(args=args)
     node = RobotNewsStationNode()
