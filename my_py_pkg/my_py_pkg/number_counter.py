@@ -2,6 +2,7 @@
 import rclpy
 from rclpy.node import Node
 from example_interfaces.msg import Int64
+from example_interfaces.srv import SetBool
 
 class NumberCounterNode(Node): 
     def __init__(self):
@@ -11,6 +12,7 @@ class NumberCounterNode(Node):
             Int64, "number", self.callback_number_counter, 10)
         self.publisher_ = self.create_publisher(Int64, "number_count", 10)
         self.get_logger().info("Number counter has been started")
+        self.server_ = self.create_service(SetBool, "add_two_ints", self.callback_counter_reset)
 
     def callback_number_counter(self, msg: Int64):
         self.counter += msg.data
@@ -20,6 +22,13 @@ class NumberCounterNode(Node):
         self.publisher_.publish(count_msg)
         
         self.get_logger().info(f"Received {msg.data}, counter: {self.counter}")
+
+    def callback_counter_reset(self, request:SetBool.Request, response: SetBool.Response):
+        self.counter = request.data
+        response.success = True
+        response.message = "Success: Counter updated"
+        return response
+
 
 def main(args=None):
     rclpy.init(args=args)

@@ -131,3 +131,10 @@ int64 sum
 
 ros2 service call /add_two_ints example_interfaces/srv/AddTwoInts {"a: 3, b: 7"}
 : to test a server through the terminal(making a client through the terminal)
+
+ros2 service list
+ros2 service type /service_name: same thing as ros2 node info 
+ros2 run my_py_pkg file_name --ros-args -r old_server_name:=new_server_name
+(*also need to rename the service on the client side if you rename a server service name*)
+
+
