@@ -42,7 +42,6 @@ ros2 run my_py_pkg py_node --ros-args -r __node:=abc
 # Launch ROS2 GUI tools
 rqt
 rqt_graph
-```
 
 ---
 
@@ -109,3 +108,26 @@ ros2 run my_py_pkg robot_news_station --ros-args -r __node:=my_station -r robot_
 ```
 
 > **Important:** If you remap a publisher's topic, you must also remap the subscriber to match!
+
+ros2 bag record /topic_name: record the data from the topic
+ros2 bag info test 
+ros2 bag play test: replay and publishes all the data that was published in the topic
+ros2 bag play *the recording name*: acts as the publisher which you recorded 
+ros2 bag record -o test2 /topic1 /topic2: recording name is test2 and is recording 2 topics 
+ros2 bag record -o test3 -a: to record all the topics 
+
+Service:
+a ROS2 service is a client/server system 
+asynchronous/synchromous
+one msg type for request, one msg type for response 
+a service server can only exist once but can have many clients 
+a service is defiened ny its name and interface
+ahaskar@ros2:~$ ros2 interface show example_interfaces/srv/AddTwoInts
+int64 a
+int64 b
+---
+int64 sum
+
+
+ros2 service call /add_two_ints example_interfaces/srv/AddTwoInts {"a: 3, b: 7"}
+: to test a server through the terminal(making a client through the terminal)
