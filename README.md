@@ -138,3 +138,15 @@ ros2 run my_py_pkg file_name --ros-args -r old_server_name:=new_server_name
 (*also need to rename the service on the client side if you rename a server service name*)
 
 
+Interfaces:
+built on basic primitive data types 
+all example interfaces: https://github.com/ros2/example_interfaces
+https://github.com/ros2/common_interfaces
+seonsor_msg interface really helpful 
+
+ros2 pkg create my_robot_interfaces 
+
+ros2 interface list: all the interfaces sourced 
+
+ros2 interface package my_robot_interfaces: all the interfaces for for my_robot_interfaces
+

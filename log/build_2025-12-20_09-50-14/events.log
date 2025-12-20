@@ -1,0 +1,95 @@
+[0.000000] (-) TimerEvent: {}
+[0.000416] (-) JobUnselected: {'identifier': 'my_robot_interfaces'}
+[0.000471] (my_py_pkg) JobQueued: {'identifier': 'my_py_pkg', 'dependencies': OrderedDict({'my_robot_interfaces': '/home/ahaskar/ros_ws/src/install/my_robot_interfaces'})}
+[0.000506] (my_py_pkg) JobStarted: {'identifier': 'my_py_pkg'}
+[0.099919] (-) TimerEvent: {}
+[0.200118] (-) TimerEvent: {}
+[0.300281] (-) TimerEvent: {}
+[0.400765] (-) TimerEvent: {}
+[0.500993] (-) TimerEvent: {}
+[0.601258] (-) TimerEvent: {}
+[0.701813] (-) TimerEvent: {}
+[0.702588] (my_py_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/my_py_pkg', 'build', '--build-base', '/home/ahaskar/ros_ws/src/build/my_py_pkg/build', 'install', '--record', '/home/ahaskar/ros_ws/src/build/my_py_pkg/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/ahaskar/ros_ws/src/my_py_pkg', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'XDG_ACTIVATION_TOKEN': 'gnome-shell/Terminator/1901-3-ros2_TIME17199322', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ahaskar', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ahaskar/ros_ws/install/my_robot_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ahaskar', 'OLDPWD': '/home/ahaskar/ros_ws', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '1702', 'SYSTEMD_EXEC_PID': '1901', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '9486', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ahaskar/ros_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ahaskar', 'JOURNAL_STREAM': '8:17650', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ahaskar', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/ros2:@/tmp/.ICE-unix/1857,unix/ros2:/tmp/.ICE-unix/1857', 'INVOCATION_ID': 'a396b70cc997450c8d2f1b52616ba00b', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.O9BRH3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/ahaskar/ros_ws/install/my_robot_interfaces:/home/ahaskar/ros_ws/install/my_py_pkg:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:81632206-5af0-4bf0-a6b2-8f5dfa21d0c6', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/ahaskar/ros_ws/src/build/my_py_pkg', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ahaskar/ros_ws/src/build/my_py_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages:/home/ahaskar/ros_ws/install/my_robot_interfaces/lib/python3.12/site-packages:/home/ahaskar/ros_ws/install/my_py_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/ahaskar/ros_ws/install/my_robot_interfaces:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[0.803091] (-) TimerEvent: {}
+[0.900893] (my_py_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[0.901219] (my_py_pkg) StdoutLine: {'line': b'creating ../build/my_py_pkg/my_py_pkg.egg-info\n'}
+[0.903155] (-) TimerEvent: {}
+[0.911867] (my_py_pkg) StdoutLine: {'line': b'writing ../build/my_py_pkg/my_py_pkg.egg-info/PKG-INFO\n'}
+[0.911947] (my_py_pkg) StdoutLine: {'line': b'writing dependency_links to ../build/my_py_pkg/my_py_pkg.egg-info/dependency_links.txt\n'}
+[0.911999] (my_py_pkg) StdoutLine: {'line': b'writing entry points to ../build/my_py_pkg/my_py_pkg.egg-info/entry_points.txt\n'}
+[0.912026] (my_py_pkg) StdoutLine: {'line': b'writing requirements to ../build/my_py_pkg/my_py_pkg.egg-info/requires.txt\n'}
+[0.912055] (my_py_pkg) StdoutLine: {'line': b'writing top-level names to ../build/my_py_pkg/my_py_pkg.egg-info/top_level.txt\n'}
+[0.912081] (my_py_pkg) StdoutLine: {'line': b"writing manifest file '../build/my_py_pkg/my_py_pkg.egg-info/SOURCES.txt'\n"}
+[0.935419] (my_py_pkg) StdoutLine: {'line': b"reading manifest file '../build/my_py_pkg/my_py_pkg.egg-info/SOURCES.txt'\n"}
+[0.935843] (my_py_pkg) StdoutLine: {'line': b"writing manifest file '../build/my_py_pkg/my_py_pkg.egg-info/SOURCES.txt'\n"}
+[0.936013] (my_py_pkg) StdoutLine: {'line': b'running build\n'}
+[0.936076] (my_py_pkg) StdoutLine: {'line': b'running build_py\n'}
+[0.936130] (my_py_pkg) StdoutLine: {'line': b'creating /home/ahaskar/ros_ws/src/build/my_py_pkg/build\n'}
+[0.936195] (my_py_pkg) StdoutLine: {'line': b'creating /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib\n'}
+[0.936475] (my_py_pkg) StdoutLine: {'line': b'creating /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg\n'}
+[0.936550] (my_py_pkg) StdoutLine: {'line': b'copying my_py_pkg/my_first_node.py -> /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg\n'}
+[0.936755] (my_py_pkg) StdoutLine: {'line': b'copying my_py_pkg/__init__.py -> /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg\n'}
+[0.936837] (my_py_pkg) StdoutLine: {'line': b'copying my_py_pkg/add_two_ints_client_no_oop.py -> /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg\n'}
+[0.937022] (my_py_pkg) StdoutLine: {'line': b'copying my_py_pkg/smartphone.py -> /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg\n'}
+[0.937107] (my_py_pkg) StdoutLine: {'line': b'copying my_py_pkg/hardware_status_publisher.py -> /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg\n'}
+[0.937177] (my_py_pkg) StdoutLine: {'line': b'copying my_py_pkg/battery.py -> /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg\n'}
+[0.937403] (my_py_pkg) StdoutLine: {'line': b'copying my_py_pkg/Led_panel.py -> /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg\n'}
+[0.937483] (my_py_pkg) StdoutLine: {'line': b'copying my_py_pkg/template_node.py -> /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg\n'}
+[0.937563] (my_py_pkg) StdoutLine: {'line': b'copying my_py_pkg/number.py -> /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg\n'}
+[0.937664] (my_py_pkg) StdoutLine: {'line': b'copying my_py_pkg/add_two_ints_server.py -> /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg\n'}
+[0.937795] (my_py_pkg) StdoutLine: {'line': b'copying my_py_pkg/number_counter.py -> /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg\n'}
+[0.937866] (my_py_pkg) StdoutLine: {'line': b'copying my_py_pkg/robot_news_station.py -> /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg\n'}
+[0.937930] (my_py_pkg) StdoutLine: {'line': b'copying my_py_pkg/add_two_ints_client.py -> /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg\n'}
+[0.938131] (my_py_pkg) StdoutLine: {'line': b'running install\n'}
+[0.941876] (my_py_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[0.951725] (my_py_pkg) StdoutLine: {'line': b'creating /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg\n'}
+[0.951789] (my_py_pkg) StdoutLine: {'line': b'copying /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg/my_first_node.py -> /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg\n'}
+[0.952218] (my_py_pkg) StdoutLine: {'line': b'copying /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg/__init__.py -> /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg\n'}
+[0.952284] (my_py_pkg) StdoutLine: {'line': b'copying /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg/add_two_ints_client_no_oop.py -> /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg\n'}
+[0.952350] (my_py_pkg) StdoutLine: {'line': b'copying /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg/smartphone.py -> /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg\n'}
+[0.952498] (my_py_pkg) StdoutLine: {'line': b'copying /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg/hardware_status_publisher.py -> /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg\n'}
+[0.952630] (my_py_pkg) StdoutLine: {'line': b'copying /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg/battery.py -> /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg\n'}
+[0.953506] (my_py_pkg) StdoutLine: {'line': b'copying /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg/Led_panel.py -> /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg\n'}
+[0.954747] (my_py_pkg) StdoutLine: {'line': b'copying /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg/template_node.py -> /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg\n'}
+[0.955230] (my_py_pkg) StdoutLine: {'line': b'copying /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg/number.py -> /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg\n'}
+[0.955297] (my_py_pkg) StdoutLine: {'line': b'copying /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg/add_two_ints_server.py -> /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg\n'}
+[0.955528] (my_py_pkg) StdoutLine: {'line': b'copying /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg/number_counter.py -> /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg\n'}
+[0.955583] (my_py_pkg) StdoutLine: {'line': b'copying /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg/robot_news_station.py -> /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg\n'}
+[0.955609] (my_py_pkg) StdoutLine: {'line': b'copying /home/ahaskar/ros_ws/src/build/my_py_pkg/build/lib/my_py_pkg/add_two_ints_client.py -> /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg\n'}
+[0.955896] (my_py_pkg) StdoutLine: {'line': b'byte-compiling /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg/my_first_node.py to my_first_node.cpython-312.pyc\n'}
+[0.956094] (my_py_pkg) StdoutLine: {'line': b'byte-compiling /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg/__init__.py to __init__.cpython-312.pyc\n'}
+[0.956262] (my_py_pkg) StdoutLine: {'line': b'byte-compiling /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg/add_two_ints_client_no_oop.py to add_two_ints_client_no_oop.cpython-312.pyc\n'}
+[0.956592] (my_py_pkg) StdoutLine: {'line': b'byte-compiling /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg/smartphone.py to smartphone.cpython-312.pyc\n'}
+[0.956866] (my_py_pkg) StdoutLine: {'line': b'byte-compiling /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg/hardware_status_publisher.py to hardware_status_publisher.cpython-312.pyc\n'}
+[0.957116] (my_py_pkg) StdoutLine: {'line': b'byte-compiling /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg/battery.py to battery.cpython-312.pyc\n'}
+[0.957365] (my_py_pkg) StdoutLine: {'line': b'byte-compiling /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg/Led_panel.py to Led_panel.cpython-312.pyc\n'}
+[0.957524] (my_py_pkg) StdoutLine: {'line': b'byte-compiling /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg/template_node.py to template_node.cpython-312.pyc\n'}
+[0.957737] (my_py_pkg) StdoutLine: {'line': b'byte-compiling /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg/number.py to number.cpython-312.pyc\n'}
+[0.957973] (my_py_pkg) StdoutLine: {'line': b'byte-compiling /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg/add_two_ints_server.py to add_two_ints_server.cpython-312.pyc\n'}
+[0.958176] (my_py_pkg) StdoutLine: {'line': b'byte-compiling /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg/number_counter.py to number_counter.cpython-312.pyc\n'}
+[0.958491] (my_py_pkg) StdoutLine: {'line': b'byte-compiling /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg/robot_news_station.py to robot_news_station.cpython-312.pyc\n'}
+[0.958642] (my_py_pkg) StdoutLine: {'line': b'byte-compiling /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg/add_two_ints_client.py to add_two_ints_client.cpython-312.pyc\n'}
+[0.958873] (my_py_pkg) StdoutLine: {'line': b'running install_data\n'}
+[0.959058] (my_py_pkg) StdoutLine: {'line': b'creating /home/ahaskar/ros_ws/src/install/my_py_pkg/share/ament_index\n'}
+[0.959107] (my_py_pkg) StdoutLine: {'line': b'creating /home/ahaskar/ros_ws/src/install/my_py_pkg/share/ament_index/resource_index\n'}
+[0.959135] (my_py_pkg) StdoutLine: {'line': b'creating /home/ahaskar/ros_ws/src/install/my_py_pkg/share/ament_index/resource_index/packages\n'}
+[0.959161] (my_py_pkg) StdoutLine: {'line': b'copying resource/my_py_pkg -> /home/ahaskar/ros_ws/src/install/my_py_pkg/share/ament_index/resource_index/packages\n'}
+[0.959520] (my_py_pkg) StdoutLine: {'line': b'copying package.xml -> /home/ahaskar/ros_ws/src/install/my_py_pkg/share/my_py_pkg\n'}
+[0.959584] (my_py_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.970874] (my_py_pkg) StdoutLine: {'line': b'Copying ../build/my_py_pkg/my_py_pkg.egg-info to /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg-0.0.0-py3.12.egg-info\n'}
+[0.972888] (my_py_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[1.003273] (-) TimerEvent: {}
+[1.078970] (my_py_pkg) StdoutLine: {'line': b'Installing add_two_ints_client script to /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/my_py_pkg\n'}
+[1.079295] (my_py_pkg) StdoutLine: {'line': b'Installing add_two_ints_client_no_oop script to /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/my_py_pkg\n'}
+[1.079389] (my_py_pkg) StdoutLine: {'line': b'Installing add_two_ints_server script to /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/my_py_pkg\n'}
+[1.079471] (my_py_pkg) StdoutLine: {'line': b'Installing hw_status_publisher script to /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/my_py_pkg\n'}
+[1.079504] (my_py_pkg) StdoutLine: {'line': b'Installing number script to /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/my_py_pkg\n'}
+[1.079729] (my_py_pkg) StdoutLine: {'line': b'Installing number_counter script to /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/my_py_pkg\n'}
+[1.080311] (my_py_pkg) StdoutLine: {'line': b'Installing py_node script to /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/my_py_pkg\n'}
+[1.082753] (my_py_pkg) StdoutLine: {'line': b'Installing robot_news_station script to /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/my_py_pkg\n'}
+[1.082834] (my_py_pkg) StdoutLine: {'line': b'Installing smartphone script to /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/my_py_pkg\n'}
+[1.083057] (my_py_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/ahaskar/ros_ws/src/build/my_py_pkg/install.log'\n"}
+[1.101177] (my_py_pkg) CommandEnded: {'returncode': 0}
+[1.103391] (-) TimerEvent: {}
+[1.118175] (my_py_pkg) JobEnded: {'identifier': 'my_py_pkg', 'rc': 0}
+[1.118624] (-) EventReactorShutdown: {}

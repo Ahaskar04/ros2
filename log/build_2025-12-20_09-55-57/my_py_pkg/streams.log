@@ -1,0 +1,30 @@
+[0.840s] Invoking command in '/home/ahaskar/ros_ws/src/my_py_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ahaskar/ros_ws/src/build/my_py_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_py_pkg build --build-base /home/ahaskar/ros_ws/src/build/my_py_pkg/build install --record /home/ahaskar/ros_ws/src/build/my_py_pkg/install.log --single-version-externally-managed install_data
+[1.038s] running egg_info
+[1.045s] writing ../build/my_py_pkg/my_py_pkg.egg-info/PKG-INFO
+[1.046s] writing dependency_links to ../build/my_py_pkg/my_py_pkg.egg-info/dependency_links.txt
+[1.046s] writing entry points to ../build/my_py_pkg/my_py_pkg.egg-info/entry_points.txt
+[1.046s] writing requirements to ../build/my_py_pkg/my_py_pkg.egg-info/requires.txt
+[1.046s] writing top-level names to ../build/my_py_pkg/my_py_pkg.egg-info/top_level.txt
+[1.064s] reading manifest file '../build/my_py_pkg/my_py_pkg.egg-info/SOURCES.txt'
+[1.065s] writing manifest file '../build/my_py_pkg/my_py_pkg.egg-info/SOURCES.txt'
+[1.065s] running build
+[1.065s] running build_py
+[1.065s] running install
+[1.069s] running install_lib
+[1.078s] running install_data
+[1.078s] running install_egg_info
+[1.087s] removing '/home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg-0.0.0-py3.12.egg-info' (and everything under it)
+[1.087s] Copying ../build/my_py_pkg/my_py_pkg.egg-info to /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages/my_py_pkg-0.0.0-py3.12.egg-info
+[1.088s] running install_scripts
+[1.162s] Installing add_two_ints_client script to /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/my_py_pkg
+[1.162s] Installing add_two_ints_client_no_oop script to /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/my_py_pkg
+[1.162s] Installing add_two_ints_server script to /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/my_py_pkg
+[1.163s] Installing hw_status_publisher script to /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/my_py_pkg
+[1.163s] Installing led_panel script to /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/my_py_pkg
+[1.163s] Installing number script to /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/my_py_pkg
+[1.163s] Installing number_counter script to /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/my_py_pkg
+[1.163s] Installing py_node script to /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/my_py_pkg
+[1.163s] Installing robot_news_station script to /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/my_py_pkg
+[1.163s] Installing smartphone script to /home/ahaskar/ros_ws/src/install/my_py_pkg/lib/my_py_pkg
+[1.164s] writing list of installed files to '/home/ahaskar/ros_ws/src/build/my_py_pkg/install.log'
+[1.179s] Invoked command in '/home/ahaskar/ros_ws/src/my_py_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ahaskar/ros_ws/src/build/my_py_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ahaskar/ros_ws/src/install/my_py_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_py_pkg build --build-base /home/ahaskar/ros_ws/src/build/my_py_pkg/build install --record /home/ahaskar/ros_ws/src/build/my_py_pkg/install.log --single-version-externally-managed install_data
