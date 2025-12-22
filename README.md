@@ -150,3 +150,5 @@ ros2 interface list: all the interfaces sourced
 
 ros2 interface package my_robot_interfaces: all the interfaces for for my_robot_interfaces
 
+
+ros2 run my_py_pkg number --ros-args -p number:=3 -p timer_period:=0.5  :to set parameters 
