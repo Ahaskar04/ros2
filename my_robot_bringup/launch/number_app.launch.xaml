@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="my_py_pkg" exec="number" name="my_number_publisher" namespce="/abc"/>
+    <!-- <param name = "number" value="6"/> -->
+    <param from="$(find-pkg-share mu_robot_bringup)/config/number_app.yaml" />
+</launch>

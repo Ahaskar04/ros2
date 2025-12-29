@@ -1,12 +1,46 @@
 # ROS2 Quick Reference Guide
 
-## Building Packages
+A comprehensive reference for common ROS2 commands and concepts.
+
+---
+
+## Table of Contents
+
+- [Package Management](#package-management)
+- [Building Packages](#building-packages)
+- [Running Nodes](#running-nodes)
+- [Visualization Tools](#visualization-tools)
+- [Turtlesim Demo](#turtlesim-demo)
+- [Topics](#topics)
+- [Recording & Playback (rosbag)](#recording--playback-rosbag)
+- [Services](#services)
+- [Interfaces](#interfaces)
+- [Parameters](#parameters)
+- [Launch Files](#launch-files)
+
+---
+
+## Package Management
+
+Create a new ROS2 package:
 
 ```bash
-# Build a specific package (run from ros2_ws directory)
-colcon build --packages-select my_py_pkg
+ros2 pkg create package_name
+```
 
-# Source your environment after building
+---
+
+## Building Packages
+
+Build a specific package (run from your `ros2_ws` directory):
+
+```bash
+colcon build --packages-select my_py_pkg
+```
+
+Source your environment after building:
+
+```bash
 source ~/.bashrc
 ```
 
@@ -23,14 +57,21 @@ source ~/.bashrc
 
 ## Running Nodes
 
+Run a node (package name followed by executable name):
+
 ```bash
-# Run a node (package_name followed by executable_name)
 ros2 run my_py_pkg py_node
+```
 
-# List all running nodes
+List all running nodes:
+
+```bash
 ros2 node list
+```
 
-# Run a node with a custom name (allows multiple instances)
+Run a node with a custom name (allows multiple instances):
+
+```bash
 ros2 run my_py_pkg py_node --ros-args -r __node:=abc
 ```
 
@@ -38,20 +79,26 @@ ros2 run my_py_pkg py_node --ros-args -r __node:=abc
 
 ## Visualization Tools
 
+Launch ROS2 GUI tools:
+
 ```bash
-# Launch ROS2 GUI tools
 rqt
 rqt_graph
+```
 
 ---
 
-## Turtlesim (Demo Package)
+## Turtlesim Demo
+
+Launch the turtlesim window:
 
 ```bash
-# Launch the turtlesim window
 ros2 run turtlesim turtlesim_node
+```
 
-# Control the turtle with keyboard
+Control the turtle with keyboard:
+
+```bash
 ros2 run turtlesim turtle_teleop_key
 ```
 
@@ -61,7 +108,8 @@ ros2 run turtlesim turtle_teleop_key
 
 A **topic** is a named bus over which nodes exchange messages.
 
-**Key characteristics:**
+### Key Characteristics
+
 - Unidirectional data stream (publisher/subscriber model)
 - Anonymous communication
 - Each topic has a specific message type
@@ -71,84 +119,274 @@ A **topic** is a named bus over which nodes exchange messages.
 
 ### Topic Commands
 
+List all active topics:
+
 ```bash
-# List all active topics
 ros2 topic list
+```
 
-# Subscribe to a topic and print messages
+Subscribe to a topic and print messages:
+
+```bash
 ros2 topic echo /robot_news
+```
 
-# Get topic info (type, publisher/subscriber count)
+Get topic info (type, publisher/subscriber count):
+
+```bash
 ros2 topic info /robot_news
 ```
 
 **Example output:**
+
 ```
 Type: example_interfaces/msg/String
 Publisher count: 1
 Subscription count: 0
 ```
 
+Show message type definition:
+
 ```bash
-# Show message type definition
 ros2 interface show example_interfaces/msg/String
+```
 
-# Check publishing frequency
+Check publishing frequency:
+
+```bash
 ros2 topic hz /robot_news
+```
 
-# Check bandwidth usage
+Check bandwidth usage:
+
+```bash
 ros2 topic bw /robot_news
 ```
 
 ### Remapping Topics
 
+Remap both node name and topic name:
+
 ```bash
-# Remap both node name and topic name
 ros2 run my_py_pkg robot_news_station --ros-args -r __node:=my_station -r robot_news:=abc
 ```
 
 > **Important:** If you remap a publisher's topic, you must also remap the subscriber to match!
 
-ros2 bag record /topic_name: record the data from the topic
-ros2 bag info test 
-ros2 bag play test: replay and publishes all the data that was published in the topic
-ros2 bag play *the recording name*: acts as the publisher which you recorded 
-ros2 bag record -o test2 /topic1 /topic2: recording name is test2 and is recording 2 topics 
-ros2 bag record -o test3 -a: to record all the topics 
+---
 
-Service:
-a ROS2 service is a client/server system 
-asynchronous/synchromous
-one msg type for request, one msg type for response 
-a service server can only exist once but can have many clients 
-a service is defiened ny its name and interface
-ahaskar@ros2:~$ ros2 interface show example_interfaces/srv/AddTwoInts
+## Recording & Playback (rosbag)
+
+Record data from a topic:
+
+```bash
+ros2 bag record /topic_name
+```
+
+Get info about a recording:
+
+```bash
+ros2 bag info test
+```
+
+Replay and publish all recorded data:
+
+```bash
+ros2 bag play test
+```
+
+Record multiple topics with a custom name:
+
+```bash
+ros2 bag record -o test2 /topic1 /topic2
+```
+
+Record all topics:
+
+```bash
+ros2 bag record -o test3 -a
+```
+
+---
+
+## Services
+
+A ROS2 service is a client/server system.
+
+### Key Characteristics
+
+- Supports both synchronous and asynchronous communication
+- One message type for request, one message type for response
+- A service server can only exist once but can have many clients
+- A service is defined by its name and interface
+
+### Example Interface
+
+```bash
+ros2 interface show example_interfaces/srv/AddTwoInts
+```
+
+**Output:**
+
+```
 int64 a
 int64 b
 ---
 int64 sum
+```
 
+### Service Commands
 
-ros2 service call /add_two_ints example_interfaces/srv/AddTwoInts {"a: 3, b: 7"}
-: to test a server through the terminal(making a client through the terminal)
+Call a service (test a server through terminal):
 
+```bash
+ros2 service call /add_two_ints example_interfaces/srv/AddTwoInts "{a: 3, b: 7}"
+```
+
+List all services:
+
+```bash
 ros2 service list
-ros2 service type /service_name: same thing as ros2 node info 
+```
+
+Get service type:
+
+```bash
+ros2 service type /service_name
+```
+
+Rename a service:
+
+```bash
 ros2 run my_py_pkg file_name --ros-args -r old_server_name:=new_server_name
-(*also need to rename the service on the client side if you rename a server service name*)
+```
 
+> **Note:** If you rename a server's service name, you also need to rename it on the client side.
 
-Interfaces:
-built on basic primitive data types 
-all example interfaces: https://github.com/ros2/example_interfaces
-https://github.com/ros2/common_interfaces
-seonsor_msg interface really helpful 
+---
 
-ros2 pkg create my_robot_interfaces 
+## Interfaces
 
-ros2 interface list: all the interfaces sourced 
+Interfaces are built on basic primitive data types.
 
-ros2 interface package my_robot_interfaces: all the interfaces for for my_robot_interfaces
+### Useful Resources
 
+- [Example Interfaces](https://github.com/ros2/example_interfaces)
+- [Common Interfaces](https://github.com/ros2/common_interfaces) — the `sensor_msgs` interface is particularly helpful
 
-ros2 run my_py_pkg number --ros-args -p number:=3 -p timer_period:=0.5  :to set parameters 
+### Interface Commands
+
+Create a custom interfaces package:
+
+```bash
+ros2 pkg create my_robot_interfaces
+```
+
+List all sourced interfaces:
+
+```bash
+ros2 interface list
+```
+
+List interfaces for a specific package:
+
+```bash
+ros2 interface package my_robot_interfaces
+```
+
+---
+
+## Parameters
+
+Set parameters when running a node:
+
+```bash
+ros2 run my_py_pkg number --ros-args -p number:=3 -p timer_period:=0.5
+```
+
+List all parameters of all nodes:
+
+```bash
+ros2 param list
+```
+
+Get the default value of a parameter:
+
+```bash
+ros2 param get /node_name /param_name
+```
+
+Load parameters from a YAML file:
+
+```bash
+ros2 run my_py_pkg number --ros-args --param-file ~/path_to_your_params_file.yaml
+```
+
+---
+
+## Launch Files
+
+Launch files allow you to start all nodes from a single file.
+
+### Best Practice
+
+Create a dedicated bringup package for launch files:
+
+```bash
+ros2 pkg create package_name_bringup
+```
+
+Run a launch file:
+
+```bash
+ros2 launch my_robot_bringup number_app.launch.xml
+```
+
+### XML Launch File Examples
+
+**Rename a node:**
+
+```xml
+<launch>
+    <node pkg="my_py_pkg" exec="number" name="my_number_publisher"/>
+</launch>
+```
+
+**Remap a topic:**
+
+```xml
+<launch>
+    <node pkg="my_py_pkg" exec="number">
+        <remap from="/number" to="/my_number"/>
+    </node>
+</launch>
+```
+
+### Namespaces
+
+Add a namespace prefix via command line:
+
+```bash
+ros2 run my_py_pkg exec_name --ros-args -r __ns:=/test
+```
+
+---
+
+## Quick Command Reference
+
+| Category | Command | Description |
+|----------|---------|-------------|
+| **Packages** | `ros2 pkg create <name>` | Create new package |
+| **Building** | `colcon build --packages-select <pkg>` | Build specific package |
+| **Nodes** | `ros2 run <pkg> <exec>` | Run a node |
+| **Nodes** | `ros2 node list` | List running nodes |
+| **Topics** | `ros2 topic list` | List active topics |
+| **Topics** | `ros2 topic echo <topic>` | Print topic messages |
+| **Topics** | `ros2 topic info <topic>` | Get topic information |
+| **Services** | `ros2 service list` | List all services |
+| **Services** | `ros2 service call <srv> <type> <args>` | Call a service |
+| **Params** | `ros2 param list` | List all parameters |
+| **Params** | `ros2 param get <node> <param>` | Get parameter value |
+| **Bag** | `ros2 bag record <topic>` | Record topic data |
+| **Bag** | `ros2 bag play <name>` | Replay recorded data |
+| **Launch** | `ros2 launch <pkg> <file>` | Run launch file |
