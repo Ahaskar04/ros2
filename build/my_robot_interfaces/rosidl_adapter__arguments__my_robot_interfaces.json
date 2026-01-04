@@ -1,0 +1,11 @@
+{
+  "package_name": "my_robot_interfaces",
+  "non_idl_tuples": [
+    "/home/ahaskar/ros_ws/src/my_robot_interfaces:msg/HardwareStatus.msg",
+    "/home/ahaskar/ros_ws/src/my_robot_interfaces:msg/LedPanelState.msg",
+    "/home/ahaskar/ros_ws/src/my_robot_interfaces:msg/Turtle.msg",
+    "/home/ahaskar/ros_ws/src/my_robot_interfaces:msg/TurtleArray.msg",
+    "/home/ahaskar/ros_ws/src/my_robot_interfaces:srv/ComputeRectangleArea.srv",
+    "/home/ahaskar/ros_ws/src/my_robot_interfaces:srv/SetLed.srv"
+  ]
+}

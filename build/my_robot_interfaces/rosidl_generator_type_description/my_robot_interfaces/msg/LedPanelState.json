@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "my_robot_interfaces/msg/LedPanelState",
+      "fields": [
+        {
+          "name": "led_states",
+          "type": {
+            "type_id": 56,
+            "capacity": 3,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "my_robot_interfaces/msg/LedPanelState",
+      "hash_string": "RIHS01_ef97d1e89b9ec6c2798f5b8b96e96af4feb67ab29e4b2135fa621a27af356ba9"
+    }
+  ]
+}
