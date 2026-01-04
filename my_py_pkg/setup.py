@@ -34,7 +34,9 @@ setup(
             "add_two_ints_client = my_py_pkg.add_two_ints_client:main",
             "hw_status_publisher = my_py_pkg.hardware_status_publisher:main",
             "led_panel = my_py_pkg.Led_panel:main",
-            "battery_client = my_py_pkg.battery:main"
+            "battery_client = my_py_pkg.battery:main",
+            "spawner = my_py_pkg.spawner:main",
+            "controller = my_py_pkg.controller:main"
         ],
     },
 )

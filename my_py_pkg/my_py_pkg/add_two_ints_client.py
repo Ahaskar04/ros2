@@ -20,7 +20,7 @@ class AddTwoIntsClients(Node):
 
         future = self.client_.call_async(request)
         future.add_done_callback(partial(self.callback_add_two_ints, request=request)) #using this to bypass the complications of spin and spin_until_future_complete in a client
-#we use partial when we need to add an extra parameter to an existign function. As in, in the above defined functkion, we're adding our own parameter of request
+        #we use partial when we need to add an extra parameter to an existign function. As in, in the above defined functkion, we're adding our own parameter of request
 
     def callback_add_two_ints(self, future, request):
         response = future.result()
