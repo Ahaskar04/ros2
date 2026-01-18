@@ -390,3 +390,12 @@ ros2 run my_py_pkg exec_name --ros-args -r __ns:=/test
 | **Bag** | `ros2 bag record <topic>` | Record topic data |
 | **Bag** | `ros2 bag play <name>` | Replay recorded data |
 | **Launch** | `ros2 launch <pkg> <file>` | Run launch file |
+
+
+
+<!-- ros2 launch urdf_tutorial display.launch.py model:=/home/ahaskar/my_robot.urdf -->
+<!-- TF is the system that tells the robot where things are relative to each other, at all times. -->
+<!-- go through the urdf xml page documentation well, includes the different types as well-->
+<!-- robot_state_publisher: alreasdy existsing node in ROS, which takes urdf as input and connects to /tf -->
+<!-- robot_state_publisher also takes joint_states as input -->
+<!-- so the robot_state_publisher takes input from the /joint_states and URDF and updates the /tf topic which sends to other node from existing stack -->
