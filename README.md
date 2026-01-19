@@ -399,3 +399,5 @@ ros2 run my_py_pkg exec_name --ros-args -r __ns:=/test
 <!-- robot_state_publisher: alreasdy existsing node in ROS, which takes urdf as input and connects to /tf -->
 <!-- robot_state_publisher also takes joint_states as input -->
 <!-- so the robot_state_publisher takes input from the /joint_states and URDF and updates the /tf topic which sends to other node from existing stack -->
+
+ros2 run rviz2 rviz2 -d path_to_urdf_config.rviz
